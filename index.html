@@ -1108,6 +1108,168 @@
 
   @keyframes pcCardIn { from { transform: translateX(110%) rotate(6deg); opacity:0; } }
 
+  /* ===== SUBSCRIBE BUTTON ON HOME ===== */
+  .su-home-btn {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-top: 1.5rem; padding: 0.75rem 1.25rem;
+    background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 100px; cursor: pointer; transition: all 0.2s;
+    font-family: 'Jost', sans-serif;
+  }
+  .su-home-btn:hover { background: rgba(201,168,76,0.15); border-color: rgba(201,168,76,0.5); }
+  .su-home-icon { font-size: 0.9rem; color: var(--gold); }
+  .su-home-text { font-size: 0.68rem; letter-spacing: 0.1em; color: var(--gold); }
+  .su-home-btn.subscribed { border-color: rgba(106,184,138,0.4); background: rgba(106,184,138,0.08); }
+  .su-home-btn.subscribed .su-home-icon,
+  .su-home-btn.subscribed .su-home-text { color: #6ab88a; }
+
+  /* ===== SIGNUP SCREEN ===== */
+  #signupScreen {
+    background: #f7f5f0; color: #2a2a2a;
+    justify-content: flex-start; padding-top: 2rem;
+  }
+  .su-wrap {
+    width: 100%; max-width: 480px;
+    display: flex; flex-direction: column;
+    padding-bottom: 3rem;
+  }
+  .su-header { margin-bottom: 1.5rem; }
+  .back-btn.su-back { color: #999; }
+  .back-btn.su-back:hover { color: #2a2a2a; }
+
+  /* Steps */
+  .su-step { display: none; flex-direction: column; }
+  .su-step.active { display: flex; }
+
+  /* Header */
+  .su-logo { font-size: 2rem; margin-bottom: 0.75rem; }
+  .su-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300; color: #1a1a1a;
+    line-height: 1; margin-bottom: 0.6rem;
+  }
+  .su-sub { font-size: 0.78rem; color: #aaa; line-height: 1.6; margin-bottom: 1.75rem; }
+
+  /* Fields */
+  .su-field-group { display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem; }
+  .su-field-row { display: flex; gap: 0.75rem; }
+  .su-field { display: flex; flex-direction: column; gap: 0.3rem; flex: 1; }
+  .su-label {
+    font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #aaa;
+  }
+  .su-optional { text-transform: none; letter-spacing: 0; font-size: 0.65rem; opacity: 0.7; }
+  .su-input {
+    padding: 0.7rem 0.9rem;
+    background: #fff; border: 1px solid #e0dbd2; border-radius: 4px;
+    font-family: 'Jost', sans-serif; font-size: 0.82rem; color: #1a1a1a;
+    outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .su-input:focus { border-color: #c9a84c; }
+  .su-input::placeholder { color: #ccc; }
+
+  /* Preferences */
+  .su-prefs-label {
+    font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #aaa; margin-bottom: 0.65rem;
+  }
+  .su-prefs { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+  .su-pref-row {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    padding: 0.85rem 1rem; background: #fff; border: 1px solid #e0dbd2;
+    border-radius: 5px; cursor: pointer; transition: border-color 0.2s;
+  }
+  .su-pref-row:has(.su-checkbox:checked) { border-color: #c9a84c; background: #fffdf5; }
+  .su-checkbox {
+    margin-top: 0.15rem; flex-shrink: 0;
+    accent-color: #c9a84c; width: 16px; height: 16px; cursor: pointer;
+  }
+  .su-pref-name { font-size: 0.78rem; color: #1a1a1a; margin-bottom: 0.15rem; }
+  .su-pref-desc { font-size: 0.65rem; color: #aaa; }
+
+  /* Time selectors */
+  .su-time-row { display: flex; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .su-select {
+    padding: 0.65rem 0.9rem; background: #fff;
+    border: 1px solid #e0dbd2; border-radius: 4px;
+    font-family: 'Jost', sans-serif; font-size: 0.8rem; color: #1a1a1a;
+    outline: none; cursor: pointer; width: 100%;
+  }
+
+  /* Formspree note */
+  .su-formspree-note {
+    font-size: 0.7rem; color: #aaa; line-height: 1.6;
+    background: #f0ece4; border-radius: 4px; padding: 0.85rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .su-formspree-input { margin-top: 0.6rem; background: #fff; }
+  .su-link { color: #c9a84c; text-decoration: underline; text-underline-offset: 2px; }
+
+  /* Error */
+  .su-error {
+    background: #fff5f5; border: 1px solid #f0d0d0; border-radius: 4px;
+    padding: 0.75rem 1rem; font-size: 0.75rem; color: #c06060;
+    margin-bottom: 1rem; line-height: 1.5;
+  }
+
+  /* Submit */
+  .su-submit-btn {
+    background: linear-gradient(135deg, #c9a84c, #a8873a);
+    color: #0d1b2a; border-radius: 4px;
+    font-size: 0.78rem; letter-spacing: 0.15em; padding: 0.95rem;
+    width: 100%; margin-bottom: 0.85rem;
+    box-shadow: 0 4px 16px rgba(201,168,76,0.3); transition: all 0.25s;
+  }
+  .su-submit-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,0.4); }
+  .su-submit-btn:disabled { opacity: 0.6; transform: none; cursor: not-allowed; }
+  .su-privacy { font-size: 0.62rem; color: #bbb; text-align: center; line-height: 1.5; }
+
+  /* Success step */
+  .su-success-icon {
+    font-size: 2.5rem; color: #c9a84c; margin-bottom: 0.75rem;
+    animation: fadeIn 0.6s ease;
+  }
+  .su-success-cards { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.75rem; }
+  .su-success-card {
+    background: #fff; border: 1px solid #e8e2d8; border-left: 3px solid #c9a84c;
+    border-radius: 5px; padding: 0.85rem 1rem;
+    font-size: 0.75rem; color: #666; line-height: 1.5;
+    animation: fadeIn 0.5s ease;
+  }
+
+  /* Setup guide */
+  .su-setup-guide {
+    background: #fff; border: 1px solid #e8e2d8; border-radius: 6px;
+    padding: 1.25rem; margin-bottom: 1.25rem;
+  }
+  .su-setup-title {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #aaa; margin-bottom: 1rem;
+  }
+  .su-setup-steps { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
+  .su-setup-step { display: flex; gap: 0.75rem; align-items: flex-start; }
+  .su-setup-num {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+    background: #c9a84c; color: #fff; font-size: 0.65rem;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Jost', sans-serif; font-weight: 400; margin-top: 0.05rem;
+  }
+  .su-setup-text { font-size: 0.73rem; color: #666; line-height: 1.55; }
+  .su-setup-text strong { color: #2a2a2a; }
+  .su-zapier-btn {
+    display: inline-block; padding: 0.55rem 1.1rem; border-radius: 3px;
+    background: #ff4a00; color: #fff; font-size: 0.65rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    font-family: 'Jost', sans-serif; transition: opacity 0.2s;
+  }
+  .su-zapier-btn:hover { opacity: 0.85; }
+  .su-done-btn {
+    background: linear-gradient(135deg, #c9a84c, #a8873a);
+    color: #0d1b2a; border-radius: 4px;
+    font-size: 0.78rem; letter-spacing: 0.15em; padding: 0.95rem;
+    width: 100%;
+  }
+
 </style>
 </head>
 <body>
@@ -1170,6 +1332,11 @@
         <div class="mode-cta">Begin →</div>
       </button>
     </div>
+
+    <button class="su-home-btn" onclick="startSignup()" id="suHomeBtn">
+      <span class="su-home-icon">✉</span>
+      <span class="su-home-text" id="suHomeBtnText">Get daily questions & check-in reminders</span>
+    </button>
   </div>
 
   <!-- SETUP -->
@@ -1666,6 +1833,137 @@
           <div class="pc-plan-desc" id="pcPlanDesc"></div>
           <div class="pc-plan-items" id="pcPlanItems"></div>
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== SIGNUP / SUBSCRIBE ===== -->
+  <div class="screen" id="signupScreen">
+    <div class="su-wrap">
+
+      <div class="su-header">
+        <button class="back-btn su-back" onclick="showScreen('welcomeScreen')">← Back</button>
+      </div>
+
+      <!-- Step 1: Sign up form -->
+      <div class="su-step active" id="suStep1">
+        <div class="su-logo">✉</div>
+        <div class="su-title">Stay Connected</div>
+        <div class="su-sub">Get a daily question and check-in reminder delivered to your inbox — for both of you.</div>
+
+        <div class="su-field-group">
+          <div class="su-field-row">
+            <div class="su-field">
+              <label class="su-label">Your name</label>
+              <input class="su-input" id="suName1" type="text" placeholder="e.g. Alex" autocomplete="given-name">
+            </div>
+            <div class="su-field">
+              <label class="su-label">Partner's name</label>
+              <input class="su-input" id="suName2" type="text" placeholder="e.g. Jordan" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="su-field">
+            <label class="su-label">Your email</label>
+            <input class="su-input" id="suEmail1" type="email" placeholder="your@email.com" autocomplete="email">
+          </div>
+
+          <div class="su-field">
+            <label class="su-label">Partner's email <span class="su-optional">(optional — we'll CC them)</span></label>
+            <input class="su-input" id="suEmail2" type="email" placeholder="partner@email.com" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="su-prefs-label">What would you like to receive?</div>
+        <div class="su-prefs">
+          <label class="su-pref-row">
+            <input type="checkbox" class="su-checkbox" id="prefQOTD" checked>
+            <div class="su-pref-text">
+              <div class="su-pref-name">☀ Question of the Day</div>
+              <div class="su-pref-desc">A new conversation question every morning</div>
+            </div>
+          </label>
+          <label class="su-pref-row">
+            <input type="checkbox" class="su-checkbox" id="prefCheckin" checked>
+            <div class="su-pref-text">
+              <div class="su-pref-name">◎ Check-In Reminder</div>
+              <div class="su-pref-desc">A gentle nudge each evening to check in with each other</div>
+            </div>
+          </label>
+        </div>
+
+        <div class="su-time-row">
+          <div class="su-field" style="flex:1">
+            <label class="su-label">Send question at</label>
+            <select class="su-select" id="suTimeQOTD">
+              <option value="07:00">7:00 AM</option>
+              <option value="08:00" selected>8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+            </select>
+          </div>
+          <div class="su-field" style="flex:1">
+            <label class="su-label">Check-in reminder at</label>
+            <select class="su-select" id="suTimeCheckin">
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00" selected>7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="21:00">9:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="su-formspree-note">
+          ⚙ To enable email sending, enter your <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" class="su-link">Formspree</a> form ID below.
+          <input class="su-input su-formspree-input" id="suFormspreeId" type="text" placeholder="e.g. xpwzabcd  (from formspree.io/forms)">
+        </div>
+
+        <div class="su-error" id="suError" style="display:none"></div>
+
+        <button class="btn su-submit-btn" onclick="submitSignup()">
+          <span id="suSubmitLabel">Subscribe ✉</span>
+        </button>
+
+        <div class="su-privacy">🔒 Your email is only used to send Spark content. We never share or sell it.</div>
+      </div>
+
+      <!-- Step 2: Success -->
+      <div class="su-step" id="suStep2">
+        <div class="su-success-icon">✦</div>
+        <div class="su-title">You're subscribed!</div>
+        <div class="su-sub" id="suSuccessMsg">Check your inbox for a welcome email.</div>
+
+        <div class="su-success-cards">
+          <div class="su-success-card" id="suCard1"></div>
+          <div class="su-success-card" id="suCard2"></div>
+        </div>
+
+        <div class="su-setup-guide">
+          <div class="su-setup-title">Set up automated daily emails</div>
+          <div class="su-setup-steps">
+            <div class="su-setup-step">
+              <div class="su-setup-num">1</div>
+              <div class="su-setup-text">Create a free account at <a href="https://zapier.com" target="_blank" rel="noopener noreferrer" class="su-link">Zapier.com</a></div>
+            </div>
+            <div class="su-setup-step">
+              <div class="su-setup-num">2</div>
+              <div class="su-setup-text">Create a new Zap: Trigger → <strong>Schedule by Zapier</strong> (set to daily at your chosen time)</div>
+            </div>
+            <div class="su-setup-step">
+              <div class="su-setup-num">3</div>
+              <div class="su-setup-text">Action → <strong>Gmail or Email by Zapier</strong> → send to the emails you signed up with</div>
+            </div>
+            <div class="su-setup-step">
+              <div class="su-setup-num">4</div>
+              <div class="su-setup-text">In the email body, paste a link to your Spark app so they can tap straight in</div>
+            </div>
+          </div>
+          <a class="su-zapier-btn" href="https://zapier.com/apps/schedule/integrations/email" target="_blank" rel="noopener noreferrer">Open Zapier →</a>
+        </div>
+
+        <button class="btn su-done-btn" onclick="showScreen('welcomeScreen')">Back to Spark →</button>
       </div>
 
     </div>
@@ -2774,11 +3072,14 @@ function showScreen(id) {
   if (id === 'savedScreen') renderList(state.saved, 'savedList');
   if (id === 'discussedScreen') renderList(state.discussed, 'discussedList');
   // Toggle dark background elements for light-mode screens
-  const lightScreens = ['qotdScreen','checkinScreen','dateIdeasScreen'];
+  const lightScreens = ['qotdScreen','checkinScreen','dateIdeasScreen','signupScreen'];
   const isLight = lightScreens.includes(id);
   document.querySelectorAll('.stars, .glow-orb').forEach(el => {
     el.style.display = isLight ? 'none' : '';
   });
+  // Nav bar only on card/saved/discussed screens
+  const navScreens = ['cardScreen','savedScreen','discussedScreen'];
+  document.getElementById('navBar').style.display = navScreens.includes(id) ? 'flex' : 'none';
 }
 
 function startOver() {
@@ -3088,13 +3389,13 @@ function buildCISummary() {
   }).join('');
 
   const chipsText = ciState.chips.length
-    ? ciState.chips.join(' · ')
+    ? ciState.chips.map(c => escHtml(c)).join(' · ')
     : 'None selected';
 
   const reflectionRow = ciState.reflection
     ? `<div class="ci-summary-row">
         <div class="ci-summary-row-label">Reflection</div>
-        <div class="ci-summary-row-val" style="font-style:italic">"${ciState.reflection}"</div>
+        <div class="ci-summary-row-val" style="font-style:italic">"${escHtml(ciState.reflection)}"</div>
        </div>`
     : '';
 
@@ -3533,7 +3834,7 @@ function renderDateCards(ideas) {
       <div class="di-card-top">
         <div style="flex:1">
           <div class="di-card-name">${escHtml(idea.name)}</div>
-          <div class="di-card-meta">${escHtml(idea.type||'')}${idea.priceRange ? ' · '+idea.priceRange : ''}</div>
+          <div class="di-card-meta">${escHtml(idea.type||'')}${idea.priceRange ? ' · '+escHtml(idea.priceRange) : ''}</div>
         </div>
         <div class="di-card-rating">${escHtml(String(idea.rating||''))}</div>
       </div>
@@ -3541,13 +3842,13 @@ function renderDateCards(ideas) {
       <div class="di-card-desc">${escHtml(idea.description||'')}</div>
       <div class="di-card-links">
         ${isRestaurant ? `
-          <a class="di-link di-link-primary" href="${idea.bookingUrl||'#'}" target="_blank" rel="noopener">OpenTable →</a>
-          <a class="di-link di-link-secondary" href="${idea.secondaryUrl||'#'}" target="_blank" rel="noopener">Resy →</a>
-          <a class="di-link di-link-neutral" href="${idea.yelpUrl||'#'}" target="_blank" rel="noopener">Yelp</a>
+          <a class="di-link di-link-primary" href="${safeUrl(idea.bookingUrl,'#')}" target="_blank" rel="noopener noreferrer">OpenTable →</a>
+          <a class="di-link di-link-secondary" href="${safeUrl(idea.secondaryUrl,'#')}" target="_blank" rel="noopener noreferrer">Resy →</a>
+          <a class="di-link di-link-neutral" href="${safeUrl(idea.yelpUrl,'#')}" target="_blank" rel="noopener noreferrer">Yelp</a>
         ` : `
-          <a class="di-link di-link-primary" href="${idea.bookingUrl||'#'}" target="_blank" rel="noopener">SeatGeek →</a>
-          <a class="di-link di-link-secondary" href="${idea.secondaryUrl||'#'}" target="_blank" rel="noopener">Ticketmaster →</a>
-          ${idea.yelpUrl ? `<a class="di-link di-link-neutral" href="${idea.yelpUrl}" target="_blank" rel="noopener">Yelp</a>` : ''}
+          <a class="di-link di-link-primary" href="${safeUrl(idea.bookingUrl,'#')}" target="_blank" rel="noopener noreferrer">SeatGeek →</a>
+          <a class="di-link di-link-secondary" href="${safeUrl(idea.secondaryUrl,'#')}" target="_blank" rel="noopener noreferrer">Ticketmaster →</a>
+          ${idea.yelpUrl ? `<a class="di-link di-link-neutral" href="${safeUrl(idea.yelpUrl,'#')}" target="_blank" rel="noopener noreferrer">Yelp</a>` : ''}
         `}
       </div>
     </div>
@@ -3842,7 +4143,7 @@ function pcDraw() {
   // Add playlist links inline for mood cards
   const hint = document.querySelector('.pc-card-hint');
   if (card.link) {
-    hint.innerHTML = `tap to flip &nbsp;·&nbsp; <a href="${card.link.spotify}" target="_blank" rel="noopener" style="color:#c8607a;text-decoration:underline;text-underline-offset:2px">Spotify</a> &nbsp; <a href="${card.link.apple}" target="_blank" rel="noopener" style="color:#c8607a;text-decoration:underline;text-underline-offset:2px">Apple Music</a>`;
+    hint.innerHTML = `tap to flip &nbsp;·&nbsp; <a href="${safeUrl(card.link.spotify)}" target="_blank" rel="noopener noreferrer" style="color:#c8607a;text-decoration:underline;text-underline-offset:2px">Spotify</a> &nbsp; <a href="${safeUrl(card.link.apple)}" target="_blank" rel="noopener noreferrer" style="color:#c8607a;text-decoration:underline;text-underline-offset:2px">Apple Music</a>`;
   } else {
     hint.textContent = 'tap to flip';
   }
@@ -3877,8 +4178,8 @@ function renderPCSaved() {
   wrap.style.display = '';
   list.innerHTML = pcState.saved.map(c => `
     <div class="pc-saved-item">
-      <div class="pc-saved-item-type">${c.type}</div>
-      <div class="pc-saved-item-text">${c.text}</div>
+      <div class="pc-saved-item-type">${escHtml(c.type)}</div>
+      <div class="pc-saved-item-text">${escHtml(c.text)}</div>
     </div>
   `).join('');
 }
@@ -3928,7 +4229,7 @@ function selectPCPlan(btn, plan) {
         <div class="pc-plan-item-name">${escHtml(item.name)}</div>
         <div class="pc-plan-item-desc">${escHtml(item.desc)}</div>
       </div>
-      ${item.url ? `<a class="pc-plan-item-link" href="${item.url}" target="_blank" rel="noopener">Shop →</a>` : '<span></span>'}
+      ${item.url ? `<a class="pc-plan-item-link" href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">Shop →</a>` : '<span></span>'}
     </div>
   `).join('');
   document.getElementById('pcPlanResult').style.display = '';
@@ -3937,7 +4238,148 @@ function selectPCPlan(btn, plan) {
 function escHtml(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-// ===== PWA SERVICE WORKER =====
+
+// Sanitise URLs from API responses — only allow https:// and mailto: to prevent javascript: injection
+function safeUrl(url, fallback) {
+  if (!url) return fallback || '#';
+  const s = String(url).trim();
+  if (s.startsWith('https://') || s.startsWith('http://') || s.startsWith('mailto:')) return s;
+  return fallback || '#';
+}
+// ==============================
+// ===== SIGNUP / SUBSCRIBE =====
+// ==============================
+
+let suState = {
+  submitted: false,
+  name1: '', name2: '', email1: '', email2: '',
+  prefQOTD: true, prefCheckin: true,
+  timeQOTD: '08:00', timeCheckin: '19:00'
+};
+
+// Override showScreen to keep our new definition (remove old one below)
+
+function startSignup() {
+  showScreen('signupScreen');
+  // Restore any saved values
+  if (suState.submitted) showSUStep(2);
+  else showSUStep(1);
+}
+
+function showSUStep(n) {
+  document.querySelectorAll('.su-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('suStep' + n).classList.add('active');
+}
+
+async function submitSignup() {
+  // Collect values
+  const name1  = document.getElementById('suName1').value.trim();
+  const name2  = document.getElementById('suName2').value.trim();
+  const email1 = document.getElementById('suEmail1').value.trim();
+  const email2 = document.getElementById('suEmail2').value.trim();
+  const prefQOTD    = document.getElementById('prefQOTD').checked;
+  const prefCheckin = document.getElementById('prefCheckin').checked;
+  const timeQOTD    = document.getElementById('suTimeQOTD').value;
+  const timeCheckin = document.getElementById('suTimeCheckin').value;
+  const formspreeId = document.getElementById('suFormspreeId').value.trim();
+
+  // Validation
+  const errEl = document.getElementById('suError');
+  errEl.style.display = 'none';
+
+  if (!name1) return showSUError('Please enter your name.');
+  if (!email1 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email1)) return showSUError('Please enter a valid email address.');
+  if (email2 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email2)) return showSUError('Partner\'s email doesn\'t look right — check the format.');
+  if (!prefQOTD && !prefCheckin) return showSUError('Please select at least one thing to receive.');
+
+  // Save state
+  suState = { submitted: true, name1, name2, email1, email2, prefQOTD, prefCheckin, timeQOTD, timeCheckin };
+
+  // Save to localStorage so subscribe button updates
+  try { localStorage.setItem('sparkSubscriber', JSON.stringify({ name1, email1, prefQOTD, prefCheckin })); } catch(e) {}
+  updateSUHomeBtn();
+
+  const btn = document.querySelector('.su-submit-btn');
+  btn.disabled = true;
+  document.getElementById('suSubmitLabel').textContent = 'Sending…';
+
+  // Try Formspree if ID provided
+  if (formspreeId) {
+    try {
+      const formId = formspreeId.replace(/[^a-zA-Z0-9]/g, ''); // sanitise
+      const res = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: name1,
+          partnerName: name2 || '(not provided)',
+          email: email1,
+          partnerEmail: email2 || '(not provided)',
+          preferences: [prefQOTD ? 'Question of the Day' : null, prefCheckin ? 'Check-In Reminder' : null].filter(Boolean).join(', '),
+          questionTime: timeQOTD,
+          checkinTime: timeCheckin,
+          _subject: `New Spark subscriber: ${name1}`,
+          _replyto: email1
+        })
+      });
+      if (!res.ok) throw new Error('Formspree error');
+    } catch(e) {
+      // Non-fatal — still show success, note the issue
+      console.warn('Formspree submission failed:', e);
+    }
+  }
+
+  btn.disabled = false;
+  document.getElementById('suSubmitLabel').textContent = 'Subscribe ✉';
+
+  // Build success cards
+  const prefs = [];
+  if (prefQOTD) prefs.push({ icon: '☀', label: 'Question of the Day', time: formatTime(timeQOTD) });
+  if (prefCheckin) prefs.push({ icon: '◎', label: 'Check-In Reminder', time: formatTime(timeCheckin) });
+
+  document.getElementById('suSuccessMsg').textContent =
+    `You're all set${name2 ? ', ' + escHtml(name1) : ''}! ${formspreeId ? 'Check your inbox for a confirmation.' : 'Add your Formspree ID above to enable email delivery.'}`;
+
+  document.getElementById('suCard1').innerHTML = prefs[0]
+    ? `<strong>${prefs[0].icon} ${escHtml(prefs[0].label)}</strong><br>Sent daily at ${prefs[0].time}`
+    : '';
+  document.getElementById('suCard2').innerHTML = prefs[1]
+    ? `<strong>${prefs[1].icon} ${escHtml(prefs[1].label)}</strong><br>Sent daily at ${prefs[1].time}`
+    : '';
+  if (!prefs[1]) document.getElementById('suCard2').style.display = 'none';
+
+  showSUStep(2);
+}
+
+function showSUError(msg) {
+  const el = document.getElementById('suError');
+  el.textContent = msg;
+  el.style.display = '';
+}
+
+function formatTime(val) {
+  const [h, m] = val.split(':').map(Number);
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const hour = h % 12 || 12;
+  return `${hour}:${String(m).padStart(2,'0')} ${ampm}`;
+}
+
+function updateSUHomeBtn() {
+  try {
+    const saved = localStorage.getItem('sparkSubscriber');
+    const btn = document.getElementById('suHomeBtn');
+    const txt = document.getElementById('suHomeBtnText');
+    if (saved) {
+      const { name1 } = JSON.parse(saved);
+      btn.classList.add('subscribed');
+      txt.textContent = name1 ? `✓ Subscribed — ${escHtml(name1)}` : '✓ Subscribed';
+      btn.onclick = () => showScreen('signupScreen');
+    }
+  } catch(e) {}
+}
+
+// Run on load to restore subscribe state
+document.addEventListener('DOMContentLoaded', updateSUHomeBtn);
 if ('serviceWorker' in navigator) {
   const swCode = `
     const CACHE = 'spark-v1';
