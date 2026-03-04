@@ -1,0 +1,40 @@
+{
+  "name": "Spark — Conversations That Connect",
+  "short_name": "Spark",
+  "description": "Five modes to deepen your relationship — questions, check-ins, date ideas, and more.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d1b2a",
+  "theme_color": "#0d1b2a",
+  "orientation": "portrait",
+  "categories": ["lifestyle", "social"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Date Session",
+      "short_name": "Date",
+      "url": "./#date",
+      "description": "Start a conversation card session"
+    },
+    {
+      "name": "Check-In",
+      "short_name": "Check-In",
+      "url": "./#checkin",
+      "description": "Daily relationship check-in"
+    }
+  ]
+}
